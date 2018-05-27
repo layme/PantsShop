@@ -1,6 +1,7 @@
 package com.newsoft.shop.util;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +55,7 @@ public class SysUtil {
 		return list;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		User user = new User();
 		user.setId(getUUID(SysProperties.USER_PREFIX));
@@ -63,6 +65,6 @@ public class SysUtil {
 		user.setPhone("12345678977");
 		user.setAddress("jfshdfklaseurfuseio");
 		List<String> list = obj2List(user);
-		System.out.println(list.toString());
+		System.out.println(list.toString()); 
 	}
 }

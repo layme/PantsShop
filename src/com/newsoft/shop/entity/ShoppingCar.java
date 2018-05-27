@@ -9,20 +9,28 @@ import java.util.Date;
  */
 public class ShoppingCar {
 	private String id;        // id
-	private String psID;      // 商品信息
+	private String psId;      // 商品信息
+	private String num;       // 数量
 	private String userId;    // 用户id
 	private Date createTime;  // 创建时间
+	
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPsID() {
-		return psID;
+	public String getPsId() {
+		return psId;
 	}
-	public void setPsID(String psID) {
-		this.psID = psID;
+	public void setPsId(String psId) {
+		this.psId = psId;
+	}
+	public String getNum() {
+		return num;
+	}
+	public void setNum(String num) {
+		this.num = num;
 	}
 	public String getUserId() {
 		return userId;

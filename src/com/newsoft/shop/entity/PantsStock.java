@@ -5,7 +5,7 @@ package com.newsoft.shop.entity;
  * @author lmy
  *
  */
-public class PentsStock {
+public class PantsStock {
 	private String id;       // id
 	private String name;     // 裤子名称
 	private Double price;    // 单价
