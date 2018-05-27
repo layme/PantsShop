@@ -43,7 +43,6 @@ public class DaoUtil {
 		// 获取连接
 		try {
 			conn = DriverManager.getConnection(SysProperties.JDBC_URL, SysProperties.JDBC_USERNAME, SysProperties.JDBC_PASSWORD);
-			System.out.println("获取数据库连接成功！");
 		} catch (SQLException e) {
 			System.out.println("获取数据库连接失败！");
 			e.printStackTrace();

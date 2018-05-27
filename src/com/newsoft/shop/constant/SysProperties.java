@@ -9,7 +9,7 @@ public class SysProperties {
 	public static final String APP_NAME = "PantsShop";
 	
 	public static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	public static final String JDBC_URL = "jdbc:mysql://localhost:3306/ps_db?useUnicode=true&characterEncoding=utf-8&SSL=false";
+	public static final String JDBC_URL = "jdbc:mysql://192.168.199.125:3306/ps_db?useUnicode=true&characterEncoding=utf-8";
 	public static final String JDBC_USERNAME = "root";
 	public static final String JDBC_PASSWORD = "00000";
 	
