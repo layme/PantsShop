@@ -1,0 +1,689 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>生活服装</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>		
+</head>
+<body>
+  <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">注册账号</a></li> 
+			 <li><a href="xinkuan.html">新款商品</a></li> 
+			 <li><a href="login.html">个人中心</a></li> 
+			 
+		   </ul>
+		</div>
+
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    <li><a class="color1" href="index.html">首页</a></li>
+				<li><a class="color6" href="cuxiao.html">促销商品</a></li>		
+				<li><a class="color9" href="jijie.html">季节服装</a></li>
+				<li><a class="color10" href="caizhi.html">材质服装</a></li>
+				<li><a class="color11" href="qinzi.html">亲子服装</a></li>
+				<li><a class="color12" href="shenghuo.html">生活服装</a></li>
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
+	   </br>
+	    </br>
+		 </br>
+	   <p align="center"><font size='5'>生活服装</font></p>
+       <div class="login">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>材质选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>牛仔材质</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>纯棉材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>棉麻材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>皮衣材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						 </div>
+                   	  <h4>风格选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>中国风风格</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>韩版风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>运动风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>嘻哈风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						</div>
+					 <h4>季节选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>春季服装选择</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>夏季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>秋季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>冬季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						</div>
+				</section>
+		        
+		</div>
+		<div class="cont span_2_of_3">
+		  <div class="mens-toolbar">
+              <div class="sort">
+               	<div class="sort-by">
+		            <label>筛选</label>
+		            <select>
+		                            <option value="">
+		                    请选择筛选方式               </option>
+		                            <option value="">
+		                    价格 : 从高到低              </option>
+		                            <option value="">
+		                    销量 : 从高到低               </option>
+		            </select>
+		            <a href=""><img src="images/arrow2.gif" alt="" class="v-middle"></a>
+               </div>
+    		</div>
+	          <div class="pager">   
+	          
+		   		<div class="clear"></div>
+	    	</div>
+     	    <div class="clear"></div>
+	       </div>
+			    <div class="box1">
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="nz.html">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">牛仔运动生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh1.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥100</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">纯棉束脚生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh2.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥110</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+	
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">活力运动生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh3.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥120</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+							
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  <div class="box1">
+				 <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">亲肤运动生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh4.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥130</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		       
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">反绒直筒生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh5.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥140</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">紧身打底生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh6.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥150</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+					
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  <div class="box1">
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">嘻哈牛仔生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh7.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥160</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	 
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">阳光运动生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh8.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥170</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+							
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">花苞背带生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh9.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥180</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  <div class="box1">
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">薄款牛仔生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh10.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥190</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				    <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">破洞个性生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh11.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥200</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		        	
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				   <div class="col_1_of_single1 span_1_of_single1"><a href="#">
+				     <div class="view1 view-fifth1">
+				  	  <div class="top_box">
+					  	<h3 class="m_1">加厚运动生活裤</h3>
+					  	<p class="m_2">不是所有的童裤都是金福娃！</p>
+				         <div class="grid_img">
+						   <div class="css3"><img src="images/sh12.jpg" alt=""/></div>
+					          <div class="mask1">
+	                       		<div class="info">立即查看</div>
+			                  </div>
+	                    </div>
+                       <div class="price">￥210</div>
+					   </div>
+					    </div>
+					   <span class="rating1">
+				       <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+						 <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				      <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				         <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+				        <label for="rating-input-1-5" class="rating-star1"></label>
+				        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
+		       
+		    	      </span>
+						 <ul class="list2">
+						  <li>
+						  	<img src="images/plus.png" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+							  <li><a class="active-icon c1" href="#">添加到购物车</a>
+								
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+			    	    <div class="clear"></div>
+			    	</a></div>
+				  <div class="clear"></div>
+			  </div>
+			  </div>
+			  <div class="clear"></div>
+			</div>
+		 
+       	   
+       	
+       	 <div class="copy">
+       	   <div class="wrap">
+       	   	  <p>版权所有 &copy; 2018.金福娃裤业有限公司.</p>
+       	   </div>
+       	 </div>
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+<div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

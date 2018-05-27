@@ -1,0 +1,302 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>涤纶</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+<!-- start menu -->     
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<!-- end menu -->
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+<!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					<link rel="stylesheet" href="css/etalage.css">
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							// This is for the dropdown list example:
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<!-- top scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>					
+</head>
+<body>
+   <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+	    </div>
+	    <div class="cssmenu">
+		   <ul>
+			 <li class="active"><a href="register.html">注册账号</a></li> 
+			 <li><a href="xinkuan.html">新款商品</a></li> 
+			 <li><a href="login.html">个人中心</a></li> 
+			 
+		   </ul>
+		</div>
+
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    <li><a class="color1" href="index.html">首页</a></li>
+				<li><a class="color6" href="cuxiao.html">促销商品</a></li>		
+				<li><a class="color9" href="jijie.html">季节服装</a></li>
+				<li><a class="color10" href="caizhi.html">材质服装</a></li>
+				<li><a class="color11" href="qinzi.html">亲子服装</a></li>
+				<li><a class="color12" href="shenghuo.html">生活服装</a></li>
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div>
+        <div class="login">
+         <div class="wrap">
+     	    <div class="rsidebar span_1_of_left">
+				   <section  class="sky-form">
+                   	  <h4>材质选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>牛仔材质</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>纯棉材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>棉麻材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>皮衣材质</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						 </div>
+                   	  <h4>风格选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>中国风风格</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>韩版风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>运动风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>嘻哈风格</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						</div>
+					 <h4>季节选择</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>春季服装选择</label>
+							</div>
+							<div class="col col-4">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>夏季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>秋季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>冬季服装选择</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>其他</label>
+						    </div>
+						</div>
+				</section>
+		        
+		</div>
+		<div class="cont span_2_of_3">
+			  <div class="labout span_1_of_a1">
+				<!-- start product_slider -->
+				     <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb _image" src="images/dl1.jpg" />
+									<img class="etalage_source_image" src="images/dl2.jpg" />
+								</a>
+							</li>
+							
+						</ul>
+					
+					
+			<!-- end product_slider -->
+			</div>
+			<div class="cont1 span_2_of_a1">
+				<h3 class="m_3">涤纶运动裤</h3>
+				
+				<div class="price_single">
+							  <span class="reducedfrom">￥150.00</span>
+							  <span class="actual">￥100.00</span><a href="#">价格亲民</a>
+							</div>
+				<ul class="options">
+					<h4 class="m_9">请选择尺寸</h4>
+					<li><a href="#">S</a></li>
+					<li><a href="#">M</a></li>
+					<li><a href="#">L</a></li>
+					<li><a href="#">XL</a></li>
+					<li><a href="#">XXL</a></li>
+					<div class="clear"></div>
+				</ul>
+				<div class="btn_form">
+				   <form>
+					 <input type="submit" value="现在购买" title="">
+				  </form>
+				</div>
+				<ul class="add-to-links">
+    			   <li><img src="images/wish.png" alt=""/><a href="#">点击收藏</a></li>
+    			</ul>
+    			<p class="m_desc">金福娃平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！
+ 注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！ </p>
+    			
+               
+			</div>
+			<div class="clear"></div>
+     
+          <p align="float"><font size='5'>更多商品</font></p>
+         <ul id="flexiselDemo3">
+			<li><img src="images/cx1.jpg" /><div class="grid-flex"><a href="#">嘻哈牛仔裤</a><p>￥ 100</p></div></li>
+			<li><img src="images/cx2.jpg" /><div class="grid-flex"><a href="#">韩版牛仔七分裤</a><p>￥ 110</p></div></li>
+			<li><img src="images/cx3.jpg" /><div class="grid-flex"><a href="#">破洞潮流牛仔裤</a><p>￥ 120</p></div></li>
+			<li><img src="images/cx4.jpg" /><div class="grid-flex"><a href="#">破洞天蓝潮流牛仔裤（女款）</a><p>￥ 130</p></div></li>
+			<li><img src="images/cx5.jpg" /><div class="grid-flex"><a href="#">直筒帅气黑色牛仔裤</a><p>￥ 140</p></div></li>
+		 </ul>
+	    <script type="text/javascript">
+		 $(window).load(function() {
+			$("#flexiselDemo1").flexisel();
+			$("#flexiselDemo2").flexisel({
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+	</script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+	 <div class="toogle">
+     	
+     </div>					
+	 <div class="toogle">
+     	
+     </div>
+     </div>
+     <div class="clear"></div>
+	 </div>
+     </div>
+	  <div class="copy">
+       	   <div class="wrap">
+       	   	  <p>版权所有 &copy; 2018.金福娃裤业有限公司.</p>
+       	   </div>
+       	 </div>
+       </div>
+       <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+<div style="display:none"><script src='http//v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
