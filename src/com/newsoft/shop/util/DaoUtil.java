@@ -173,11 +173,10 @@ public class DaoUtil {
 				throw new SysException("设置SQL参数失败！");
 			}
 		} else {
-			List<String> list = SysUtil.obj2List(param);
-			if (param != null && list.size() > 0) {
-				for (int i = 0; i < list.size(); i++) {
+			if (param != null && ((List<String>) param).size() > 0) {
+				for (int i = 0; i < ((List<String>) param).size(); i++) {
 					try {
-						ps.setString(i + 1,list.get(i));
+						ps.setString(i + 1,((List<String>) param).get(i));
 					} catch (SQLException e) {
 						System.out.println("设置SQL参数失败！");
 						e.printStackTrace();
